@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#153b50">
+<meta name="description" content="Hulp bij kleine klusjes in Kaatsheuvel. Bekijk onze klusjes en duidelijke prijzen en vraag eenvoudig hulp aan.">
+<title>Opa & Oma Hulp | Kleine klusjes, persoonlijke hulp</title>
+
+<style>
+:root {
+    --navy: #153b50;
+    --blue: #246b86;
+    --blue-light: #eaf3f6;
+    --cream: #faf9f6;
+    --white: #ffffff;
+    --text: #253640;
+    --muted: #64747c;
+    --border: #e0e7e9;
+    --green: #286b52;
+    --radius: 16px;
+    --shadow: 0 12px 35px rgba(21, 59, 80, .08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, .button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+header {
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 21px;
+    letter-spacing: -.5px;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    background: var(--navy);
+    color: white;
+    border-radius: 13px;
+    font-size: 23px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .2s ease;
+}
+
+.button-primary {
+    color: white;
+    background: var(--navy);
+}
+
+.button-primary:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background: white;
+    border-color: var(--border);
+    color: var(--navy);
+}
+
+.button-secondary:hover {
+    border-color: var(--blue);
+}
+
+.menu-toggle {
+    display: none;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: white;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.hero {
+    background: var(--cream);
+    padding: 88px 0 82px;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--green);
+    background: #e7f2eb;
+    padding: 7px 13px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+h1, h2, h3 {
+    color: var(--navy);
+    line-height: 1.2;
+    letter-spacing: -.7px;
+}
+
+h1 {
+    font-size: clamp(38px, 5vw, 59px);
+    margin-bottom: 23px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 19px;
+    max-width: 540px;
+    margin-bottom: 29px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-visual {
+    min-height: 355px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    border-radius: 26px;
+    background: linear-gradient(145deg, #e4eff0, #d0e3e8);
+    overflow: hidden;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 355px;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.visual-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.96);
+    padding: 17px 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.visual-label strong {
+    display: block;
+    color: var(--navy);
+    font-size: 17px;
+}
+
+.visual-label span {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.trust-strip {
+    border-bottom: 1px solid var(--border);
+    padding: 23px 0;
+}
+
+.trust-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px 55px;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    max-width: 680px;
+    margin-bottom: 38px;
+}
+
+.section-heading.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 41px);
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 27px;
+    background: white;
+    transition: .2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: #c8dce2;
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: var(--blue-light);
+    border-radius: 14px;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 19px;
+}
+
+.service-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 17px;
+}
+
+.price {
+    color: var(--green);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.price small {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.service-bottom a {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.more-note {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.how-section {
+    background: var(--cream);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.step {
+    padding: 10px;
+}
+
+.step-number {
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 19px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-box {
+    min-height: 280px;
+    border-radius: 22px;
+    background: var(--blue-light);
+    display: grid;
+    place-items: center;
+    font-size: 90px;
+}
+
+.about-copy h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-copy p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.request-section {
+    background: var(--cream);
+}
+
+.request-wrapper {
+    max-width: 790px;
+    margin: auto;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 38px;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.request-wrapper h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.form-intro {
+    color: var(--muted);
+    margin-bottom: 27px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--navy);
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    border: 1px solid #ccd8dd;
+    border-radius: 9px;
+    padding: 13px 14px;
+    background: white;
+    color: var(--text);
+    min-height: 49px;
+}
+
+.field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: 3px solid #d8eaf1;
+    border-color: var(--blue);
+}
+
+.form-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 19px 0;
+}
+
+.form-status {
+    display: none;
+    background: #e7f2eb;
+    color: #20533f;
+    border-radius: 9px;
+    padding: 14px;
+    margin-top: 15px;
+}
+
+footer {
+    background: var(--navy);
+    color: white;
+    padding: 48px 0 25px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding-bottom: 32px;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+footer p, footer a {
+    color: #d4e0e6;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding-top: 20px;
+    color: #d4e0e6;
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav .button {
+        display: none;
+    }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: min(100% - 30px, 1120px);
+    }
+
+    .nav {
+        min-height: 72px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 10px 0 15px;
+        gap: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 5px;
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 57px 0 45px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-visual, .hero-visual img {
+        min-height: 260px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .service-grid, .steps, .about-grid, .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field.full {
+        grid-column: auto;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .trust-items {
+        justify-content: flex-start;
+        gap: 12px 22px;
+    }
+
+    .about-box {
+        min-height: 190px;
+    }
+
+    .about-copy h2 {
+        font-size: 30px;
+    }
+
+    .request-wrapper {
+        padding: 23px 18px;
+    }
+
+    .request-wrapper h2 {
+        font-size: 29px;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a class="brand" href="#home" aria-label="Opa en Oma Hulp homepage">
+            <span class="brand-icon" aria-hidden="true">H</span>
+            <span>Opa &amp; Oma Hulp</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-expanded="false" aria-controls="navLinks">
+            Menu ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks" aria-label="Hoofdnavigatie">
+            <a href="#home">Home</a>
+            <a href="#klusjes">Onze klusjes</a>
+            <a href="#werkwijze">Zo werkt het</a>
+            <a href="#over-ons">Over ons</a>
+            <a href="#aanvragen">Contact</a>
+        </nav>
+
+        <a class="button button-primary" href="#aanvragen">Klus aanvragen</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">Kleine hulp, dichtbij huis</span>
+                <h1>Kleine klusjes.<br>Persoonlijke hulp.</h1>
+                <p>
+                    Een handje hulp nodig bij een klein klusje?
+                    Bekijk onze diensten en duidelijke prijzen.
+                    We helpen graag in Kaatsheuvel en omgeving.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button button-primary" href="#klusjes">
+                        Bekijk onze klusjes →
+                    </a>
+                    <a class="button button-secondary" href="#aanvragen">
+                        Vraag hulp aan
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img
+                    src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1100&q=85"
+                    alt="Een oudere persoon en een jongere die samen tijd doorbrengen"
+                    onerror="this.style.display='none'">
+                <div class="visual-label">
+                    <strong>Hulp bij kleine klusjes</strong>
+                    <span>Duidelijke prijzen en persoonlijk contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-strip">
+        <div class="container trust-items">
+            <span>✓ Duidelijke prijzen</span>
+            <span>✓ Eenvoudig aanvragen</span>
+            <span>✓ Persoonlijk contact</span>
+        </div>
+    </div>
+
+    <section id="klusjes">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="eyebrow">Onze diensten</span>
+                <h2>Waar kunnen we mee helpen?</h2>
+                <p>
+                    Kleine klusjes kunnen soms veel verschil maken.
+                    Kies hieronder wat u nodig heeft.
+                </p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🐕</div>
+                    <h3>Hond uitlaten</h3>
+                    <p>Een rondje wandelen met uw hond, in overleg over de route en duur.</p>
+                    <div class="service-bottom">
+                        <span class="price">€ 2,50</span>
+                        <a href="#aanvragen" data-service="Hond uitlaten">Aanvragen →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🗑️</div>
+                    <h3>Container aan straat</h3>
+                    <p>We zetten uw container op de afgesproken dag aan de straat.</p>
+                    <div class="service-bottom">
+                        <span class="price">€ 1,00</span>
+                        <a href="#aanvragen" data-service="Container aan straat zetten">Aanvragen →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🌱</div>
+                    <h3>Plantjes water geven</h3>
+                    <p>We geven uw plantjes water volgens uw aanwijzingen.</p>
+                    <div class="service-bottom">
+                        <span class="price">€ 1,50</span>
+                        <a href="#aanvragen" data-service="Plantjes water geven">Aanvragen →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🧹</div>
+                    <h3>Stoep vegen</h3>
+                    <p>We vegen uw stoep netjes schoon.</p>
+                    <div class="service-bottom">
+                        <span class="price">€ 2,00</span>
+                        <a href="#aanvragen" data-service="Stoep vegen">Aanvragen →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🍂</div>
+                    <h3>Bladeren bij elkaar vegen</h3>
+                    <p>We verzamelen bladeren op een afgesproken stukje tuin of stoep.</p>
+                    <div class="service-bottom">
+                        <span class="price">€ 3,00</span>
+                        <a href="#aanvragen" data-service="Bladeren bij elkaar vegen">Aanvragen →</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🗑️</div>
+                    <h3>Container terugzetten</h3>
+                    <p>We zetten uw container na het legen weer terug op zijn plek.</p>
+                    <div class="service-bottom">
+                        <span class="price">€ 1,00</span>
+                        <a href="#aanvragen" data-service="Container terugzetten">Aanvragen →</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="more-note">
+                De genoemde prijzen gelden voor kleine, vooraf afgesproken klusjes.
+                De precieze omvang en duur spreken we vooraf samen af.
+            </p>
+        </div>
+    </section>
+
+    <section class="how-section" id="werkwijze">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="eyebrow">Eenvoudig geregeld</span>
+                <h2>Zo werkt het</h2>
+                <p>In drie eenvoudige stappen een klus aanvragen.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Kies een klusje</h3>
+                    <p>Bekijk onze diensten en kies de hulp die u nodig heeft.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Stuur een aanvraag</h3>
+                    <p>Vertel ons welk klusje u wilt laten doen en wanneer het uitkomt.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>We nemen contact op</h3>
+                    <p>We bespreken samen de mogelijkheden en spreken de afspraak af.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="over-ons">
+        <div class="container about-grid">
+            <div class="about-box" aria-hidden="true">🏡</div>
+
+            <div class="about-copy">
+                <span class="eyebrow">Dichtbij en toegankelijk</span>
+                <h2>Een klein klusje hoeft geen groot probleem te zijn.</h2>
+                <p>
+                    Soms is een beetje hulp precies wat nodig is.
+                    Daarom willen we kleine, alledaagse klusjes
+                    eenvoudig en overzichtelijk maken.
+                </p>
+                <p>
+                    We beginnen in Kaatsheuvel en richten ons op
+                    duidelijke afspraken, begrijpelijke prijzen en
+                    vriendelijk contact.
+                </p>
+                <a class="button button-primary" href="#aanvragen">
+                    Neem contact op →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="request-section" id="aanvragen">
+        <div class="container">
+            <div class="request-wrapper">
+                <span class="eyebrow">Klus aanvragen</span>
+                <h2>Waarmee kunnen we helpen?</h2>
+                <p class="form-intro">
+                    Vul het formulier in. We bespreken daarna samen
+                    of en wanneer de klus uitgevoerd kan worden.
+                </p>
+
+                <form id="requestForm">
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="name">Uw naam *</label>
+                            <input id="name" name="name" autocomplete="name"
+                                   required maxlength="100"
+                                   placeholder="Uw naam">
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Telefoonnummer *</label>
+                            <input id="phone" name="phone" type="tel"
+                                   autocomplete="tel" required maxlength="30"
+                                   placeholder="Uw telefoonnummer">
+                        </div>
+
+                        <div class="field full">
+                            <label for="service">Welk klusje wilt u aanvragen? *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Kies een klusje</option>
+                                <option>Hond uitlaten</option>
+                                <option>Container aan straat zetten</option>
+                                <option>Plantjes water geven</option>
+                                <option>Stoep vegen</option>
+                                <option>Bladeren bij elkaar vegen</option>
+                                <option>Container terugzetten</option>
+                                <option>Anders / eerst overleggen</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="date">Gewenste datum</label>
+                            <input id="date" name="date" type="date">
+                        </div>
+
+                        <div class="field">
+                            <label for="time">Gewenste tijd</label>
+                            <select id="time" name="time">
+                                <option value="">Geen voorkeur</option>
+                                <option>Ochtend</option>
+                                <option>Middag</option>
+                                <option>Avond</option>
+                            </select>
+                        </div>
+
+                        <div class="field full">
+                            <label for="details">Extra uitleg (optioneel)</label>
+                            <textarea id="details" name="details" maxlength="1000"
+                                      placeholder="Vertel kort wat er moet gebeuren. Vermeld hier geen bankgegevens of andere gevoelige informatie."></textarea>
+                        </div>
+                    </div>
+
+                    <p class="form-note">
+                        Uw aanvraag is nog geen bevestigde afspraak.
+                        We bespreken eerst of de klus mogelijk is.
+                        Vul geen volledig adres in totdat we samen
+                        hebben afgesproken hoe de aanvraag wordt afgehandeld.
+                    </p>
+
+                    <button class="button button-primary" type="submit">
+                        Aanvraag voorbereiden →
+                    </button>
+
+                    <div class="form-status" id="formStatus" role="status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>Opa &amp; Oma Hulp</h3>
+                <p>Kleine klusjes, persoonlijke hulp.</p>
+                <p>Kaatsheuvel en omgeving.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Menu</h3>
+                <a href="#klusjes">Onze klusjes</a>
+                <a href="#werkwijze">Zo werkt het</a>
+                <a href="#over-ons">Over ons</a>
+                <a href="#aanvragen">Klus aanvragen</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> Opa &amp; Oma Hulp. Alle rechten voorbehouden.
+        </div>
+    </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});
+
+document.querySelectorAll("[data-service]").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("service").value = link.dataset.service;
+    });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("requestForm").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const status = document.getElementById("formStatus");
+
+    status.style.display = "block";
+    status.textContent =
+        "Het formulier werkt nog niet als echte verzending. " +
+        "We moeten het eerst koppelen aan een veilige manier om aanvragen te ontvangen. " +
+        "Er is nog niets verstuurd.";
+});
+</script>
+
+</body>
+</html>
